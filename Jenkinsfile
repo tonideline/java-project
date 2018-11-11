@@ -7,7 +7,7 @@ sh 'ant -f test.xml -v'
 sh 'ant -buildfile results.xml' 
 }
 
-stage('Results') {
+stage('Resultss') {
 junit 'reports/results.xml' }
 
 }
