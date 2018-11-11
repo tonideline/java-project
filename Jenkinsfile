@@ -4,11 +4,11 @@ node('linux') {
   stage('Unit Tests') {
    git 'https://github.com/tonideline/java-project.git'
    sh 'ant -f test.xml -v'
-   sh 'ant -buildfile results.xml' 
+   sh 'ant -buildfile reports/result.xml' 
 }
 stage('Build') { sh 'ant -f '
 }
 stage('Results') {
- junit 'reports/results.xml' }
+ junit 'reports/result.xml' }
 
 }
