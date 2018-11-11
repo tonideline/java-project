@@ -14,7 +14,7 @@ stage('Results') {
 }
 
 stage('Deploy') { 
-sh 'aws s3 cp $WORKSPACE/target/ s3://tdeline-assignment-10/${JOB_NAME}/${BUILD_NUMBER}/
+sh ("aws s3 cp $WORKSPACE/target/ s3://tdeline-assignment-10/${JOB_NAME}/${BUILD_NUMBER}")
   
 }
 
